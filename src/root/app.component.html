@@ -1,7 +1,11 @@
 <!-- Layout Login -->
 <div *ngIf="isLoginPage()">
-  login Layout
+  login Page
+  <br>
+  <a class="navbar-brand" routerLink="/" routerLinkActive="active">Back To Home</a>
+  <router-outlet></router-outlet>
 </div>
+
 <!-- Layout Default -->
 <nav *ngIf="!isLoginPage()" class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
@@ -17,14 +21,7 @@
       <a class="navbar-brand" routerLink="/" routerLinkActive="active">User</a>
       <a class="navbar-brand" routerLink="/login" routerLinkActive="active">Product</a>
       <a class="navbar-brand" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </nav>
-
-<div class="container">
-
-  <h1>{{title}}</h1>
-
-
-  <router-outlet></router-outlet>
-</div>
