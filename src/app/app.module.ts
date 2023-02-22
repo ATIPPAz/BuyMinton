@@ -9,23 +9,9 @@ import { AppComponent } from './app.component'
 import { HomeComponent } from '../pages/home/home.component'
 import { ContactComponent } from '../pages/contact/contact.component'
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'login', component: ContactComponent },
-
-  // { path: '/', component: HomeComponent, pathMatch: 'full' },
-]
-
 @NgModule({
   declarations: [AppComponent, HomeComponent, ContactComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CommonModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: false }),
-  ],
+  imports: [BrowserModule, AppRoutingModule, CommonModule],
   providers: [],
   bootstrap: [AppComponent],
 })
