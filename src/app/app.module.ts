@@ -8,11 +8,11 @@ import { CommonModule } from '@angular/common'
 import { AppComponent } from './app.component'
 import { HomeComponent } from '../pages/home/home.component'
 import { ContactComponent } from '../pages/contact/contact.component'
-
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ContactComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, CommonModule],
   providers: [],
+  // exports: { HomeComponent, ContactComponent },
   bootstrap: [AppComponent],
 })
 export class AppModule {}

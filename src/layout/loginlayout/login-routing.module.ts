@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router'
 import { LoginlayoutComponent as Loginlayout } from './layout/loginlayout.component'
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
     component: Loginlayout,
-    children: [
-      {
-        path: 'login',
-        component: Loginlayout,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: 'login',
+    //     component: Loginlayout,
+    //   },
+    // ],
   },
 ]
 

@@ -27,6 +27,24 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: '',
+    component: Defaultlayout,
+    children: [
+      {
+        path: '',
+        redirectTo: '/contact',
+        pathMatch: 'full',
+      },
+      {
+        path: 'contact',
+        loadChildren: () =>
+          import('../layout/defaultlayout/default.module').then(
+            (c) => c.DefaultModule
+          ),
+      },
+    ],
+  },
 
   //login layout
 
